@@ -14591,7 +14591,24 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>Spring 2024 Data Science Project</strong></p>
+<h2 id="Spring-2024-Data-Science-Project-Contributions"><strong>Spring 2024 Data Science Project Contributions</strong><a class="anchor-link" href="#Spring-2024-Data-Science-Project-Contributions">&#182;</a></h2><p>Member 1: Ashley Chung, Contribution: 100%. Member 2: William Chan, Contribution: 95% (did not contribute to H). Member 3: John Shim, Contribution: 95% (did not contribute to H).</p>
+<p>"We, all Ashley Chung, William Chan, and John Shim, agree together that the above information is true, and we are confident about our contributions to this submitted project/final tutorial."</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Contribution-Specifics"><strong>Contribution Specifics</strong><a class="anchor-link" href="#Contribution-Specifics">&#182;</a></h2><p>Ashley Chung - 5/06/2024
+Cleaned Functioning Day and Date columns, some summary statistics, outliers visualizations, relationship between seasons and rented bike count, feature engineering (including the hot encoding that was used for all three regression models), the designing, development, training, and testing of linear regression, some insights and conclusions, some tutorial instructions throughout.</p>
+<p>William Chan - 5/06/2024 I helped in coming up with our over represented features and creating different visualizations for some of the summary statistics. Contributed to some of the conclusions we drew from our summary statistics. I also came up with an idea to use a Mann-Whitney test to see if the median rented bike count is the same during daytime and nighttime hours. Helped contribute to the tutorial instructions for all our different sections.</p>
+<p>John Shim - 5/06/2024
+I found the Seoul Bike Sharing Demand dataset on Kaggle and shared the idea with my group. I worked with everyone on the portion of the data cleaning where I hot encoded the column, 'Functioning Days' from Yes and No to 1s and 0s. I then implemented the protion of the summary statistics that used the describe() function. I also drew the histograms of rented bike hours vs rainy hours, non-rainy hours, snowy hours, and non-snowy hours. I worked on the section of the hypothesis testing, Relationship Between Rented Bike Count and Visibility where I did a Mann-Whitney test testing The number of rented bikes per hour under normal visibility vs low visibility. In this section I also drew boxplots and violin plots to visualize rented bike count by visibility. I designed, developed, trained, and test the random forest and gradient boosting regression models. I also worked on portions of the conclusion that explained insights on the results of the two models.</p>
 
 </div>
 </div>
@@ -19678,7 +19695,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Let’s now hop into our primary analysis. We will first apply linear regression to our machine learning model to help us predict the number of rented bikes based on the different features we are looking at.</p>
+<p>Let’s now hop into our primary analysis. We will first apply feature engineering to prepare our data for machine learning.</p>
 
 </div>
 </div>
@@ -19690,7 +19707,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Linear-Regression"><strong>Linear Regression</strong><a class="anchor-link" href="#Linear-Regression">&#182;</a></h2>
+<h2 id="Feature-Engineering"><strong>Feature Engineering</strong><a class="anchor-link" href="#Feature-Engineering">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -19732,7 +19749,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>To ensure our data meets the assumptions of linear regresssion, we can apply log transformations.</p>
+<p>To ensure our data is scaled similarly, we can apply log transformations.</p>
 
 </div>
 </div>
@@ -19769,7 +19786,18 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Our X or independent variables will be everything except “rented bike count.” These are the variables that our linear regression model will use to predict our Y or dependent variable, which is “rented bike count.”</p>
+<h2 id="Linear-Regression"><strong>Linear Regression</strong><a class="anchor-link" href="#Linear-Regression">&#182;</a></h2>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>We will now create a linear regression model to help us predict the number of rented bikes based on the different features we are looking at. Our X or independent variables will be everything except “rented bike count.” These are the variables that our linear regression model will use to predict our Y or dependent variable, which is “rented bike count.”</p>
 
 </div>
 </div>
@@ -20723,7 +20751,7 @@ class="
 <p>Our exploratory analysis revealed significant correlations between bike rental count and factors like seasons, time of day, and visibility. Using statistical tests such as the Kruskal-Wallis test and Mann-Whitney U test, we validated our conclusions regarding the impact of these factors on bike rental counts. These tests provided strong evidence supporting our findings and highlighted the importance of considering these factors in predicting bike rental demand accurately.</p>
 <p>Building on our exploratory analysis, we developed predictive models using linear regression and random forest regression techniques. While our linear regression model provided a baseline understanding of the relationships between features and bike rental count, our random forest regression model offered superior predictive performance. These models have the potential to assist bike rental operators in optimizing inventory management, pricing strategies, and operational decisions to meet demand efficiently.</p>
 <p>The Random Forest Regression model and the Gradient Boosting Regression model has demonstrated strong predictive performance on the Seoul Bike Sharing dataset, with a Mean Squared Error of 0.1637788495116745 and an $r^{2}$ Score of 0.8704339880237051 for random forest and Mean Squared Error of 0.21430818270415072 and an $r^{2}$ Score of 0.830460058489514 for gradient boosting, indicating their ability to accurately forecast bike rental demand based on factors such as weather conditions, time of day, and day of the week. The graphs of each respective model also show that many of the points are concentrated near the estimated regression line indicating the random forest and gradient boosting regression models fit the data well and the models' predictions are quite accurate. By leveraging the feature importance insights provided by the model, bike rental operators can optimize bike distribution across stations, adjust pricing strategies, schedule maintenance activities, and communicate expected bike availability to customers, ultimately transforming their operations by enabling data-driven decision-making and improving overall efficiency.</p>
-<p>We notice that after running feature importances on both the random forest and gradient boosting regression models that temperature, humidity, and rainfall are some of the biggest factors in predicting bike rental demand Seoul, South Korea. While both regression models provide the same insights into most influential predictors, the feature importance measures differ between the two methods. Random Forest uses a measure called Mean Decrease in Impurity (MDI), which is based on the decrease in node impurity weighted by the probability of reaching that node. Gradient Boosting, on the other hand, can use various feature importance measures, such as Gain (the improvement in loss function brought by a feature) and Cover (the number of samples affected by a feature) all of which are then averaged across all trees in the model to calculate feature importance. Since both the random forest regression model and the gradient boosting regression model indicate the same results, we can reliably say that temperature, humidity, and rainfall are the most influential predictors of Seoul's bike renting demand.</p>
+<p>We notice that after running feature importances on both the random forest and gradient boosting regression models that temperature, humidity, and rainfall are some of the biggest factors in predicting bike rental demand Seoul, South Korea. While both regression models provide the similar insights into most influential predictors, the feature importance measures differ between the two methods. Random Forest uses a measure called Mean Decrease in Impurity (MDI), which is based on the decrease in node impurity weighted by the probability of reaching that node. Gradient Boosting, on the other hand, can use various feature importance measures, such as Gain (the improvement in loss function brought by a feature) and Cover (the number of samples affected by a feature) all of which are then averaged across all trees in the model to calculate feature importance. Since both the random forest regression model and the gradient boosting regression model indicate the similar results, we can reliably say that temperature, humidity, and rainfall are the most influential predictors of Seoul's bike renting demand.</p>
 <p>Overall, we can use this data and analysis to provide Seoul with more information about the number of rented bikes they may expect to have in a given day based on various factors like temperature, humidity, and the day of the week. This can help Seoul create a more efficient bike program for everyone in the city to use.</p>
 
 </div>

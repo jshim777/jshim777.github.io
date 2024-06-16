@@ -20155,7 +20155,7 @@ Then we repeat the same steps as our other models where we separate our features
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-python"><pre><span></span><span class="n">yrf_pred</span> <span class="o">=</span> <span class="n">rf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">Xrf_test</span><span class="p">)</span>
 <span class="n">mse_test</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">yrf_test</span><span class="p">,</span> <span class="n">yrf_pred</span><span class="p">)</span>
-<span class="n">r2_test</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">yrf_pred</span><span class="p">)</span>
+<span class="n">r2_test</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">yrf_test</span><span class="p">,</span> <span class="n">yrf_pred</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Mean Squared Error: </span><span class="si">{</span><span class="n">mse_test</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"R^2 Score: </span><span class="si">{</span><span class="n">r2_test</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
